@@ -1,7 +1,7 @@
 #####################################################################
 ##### BaySub algorithm 
 ##### Author Yetian Fan
-##### Data 2021-07-20
+##### Date 2021-07-20
 ##### The pairs of M-value in Data.Rdata
 #####################################################################
 BaySub <- function(nstep,k,initialtimes){
