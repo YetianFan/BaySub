@@ -180,7 +180,7 @@ for (s in 2:nstep){
     while((mu[i,s] < meantruncate)|(mu[i,s] > meantruncate+lengthtruncate)){
       mu[i,s] = rnorm(1,mean=(sumX[i]/countNum[i]),sd=(sqrt(sigmaval[i,s-1]/countNum[i])))
     }
-    Gamalpha = (countNum[i]/2)+1
+    Gamalpha = (countNum[i]/2)-1
     Gambeta = 0.5*sumX2[i]-mu[i,s]*sumX[i]+0.5*countNum[i]*mu[i,s]^2
     sigmaval[i,s] = (1/rgamma(1,Gamalpha,Gambeta))
     while((sigmaval[i,s] < sdtruncate)|(sigmaval[i,s] > sdtruncate+lengthtruncate)){
@@ -236,7 +236,7 @@ for (s in 2:nstep){
   }
   
   for(i in 1:2){
-    Gamalpha = (countNum[i]/2)+1
+    Gamalpha = (countNum[i]/2)-1
     Gambeta = 0.5*sumY2[i]-alpha[i,s]*sumY[i]+0.5*countNum[i]*alpha[i,s]^2
     ita[i,s] = (1/rgamma(1,Gamalpha,Gambeta))
     while((ita[i,s] < sdtruncate)|(ita[i,s] > sdtruncate+lengthtruncate)){
