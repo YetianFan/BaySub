@@ -20,7 +20,7 @@ n = dim(X)[1]
 m = dim(X)[2]
 
 ##### initial the parameters
-### Z[i,j], W[i,j], alpha[s], ita[s], mu[s], sigmaval[s], gammaval, delta, Prolambda[k], lambda[n], R[j]
+### Z[i,j], W[i,j], alpha[s], ita[s], mu[s], sigmaval[s], gammaval[s], delta[s], Prolambda[k], lambda[s], R[j]
 Z = round(matrix(runif(n*m,0,1),nrow=n))
 W = round(matrix(runif(k*m,0,1),nrow=k))
 alpha = matrix(NA,nrow=2,ncol=nstep)
